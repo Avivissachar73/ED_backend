@@ -35,7 +35,8 @@ const corsConf = {
   origin: utils.getOriginsInAllProtocols(8080, 8081),
   credentials: true
 }
-if (process.env.NODE_ENV === 'development') {
+// if (process.env.NODE_ENV === 'development') {
+if (config.env === 'development') {
   server.use(cors(corsConf));
 } else app.use(enforce.HTTPS( { trustProtoHeader: true } ));
 

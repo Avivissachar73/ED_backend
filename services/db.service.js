@@ -44,8 +44,8 @@ async function connect() {
  */
 async function connectToDb(dbUrl = DB_URL, dbName = DB_NAME) {
     try {
-        // const url = process.env.nodeEnv === 'test'? dbUrl : `${dbUrl}/${dbName}`;
-        const url = process.env.NODE_ENV === 'test'? dbUrl : `${dbUrl}/${dbName}`;
+        // const url = config.env.nodeEnv === 'test'? dbUrl : `${dbUrl}/${dbName}`;
+        const url = config.env.NODE_ENV === 'test'? dbUrl : `${dbUrl}/${dbName}`;
         client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
         const db = client.db(dbName);
         return db;
