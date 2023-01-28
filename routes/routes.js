@@ -9,7 +9,7 @@ const { connectOrganizationRoutes } = require('../api/organization/organization.
 const { connectPostRoutes } = require('../api/post/post.routes');
 const { connectCommentRoutes } = require('../api/comment/comment.routes');
 
-const { connectEdAppRoutes } = require('../api/ED-Map/msg.routes');
+const { connectEdAppRoutes } = require('../api/ED-map/msg.routes');
 const { connectShoppingListRoutes } = require('../api/shoppingList/shoppingList.routes');
 
 module.exports = (server) => {
