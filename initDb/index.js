@@ -1,0 +1,1 @@
+require('./initDb.function.js')();
