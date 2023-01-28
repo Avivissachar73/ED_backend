@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const path = require('path');
 const session = require('express-session');
+const enforce = require('express-sslify');
 const connectMongoDbSession = require('connect-mongodb-session');
 
 const utils = require('./services/utils.service');
@@ -36,7 +37,7 @@ const corsConf = {
 }
 if (process.env.NODE_ENV === 'development') {
   server.use(cors(corsConf));
-}
+} else app.use(enforce.HTTPS( { trustProtoHeader: true } ));
 
 const connectRoutes = require('./routes/routes');
 connectRoutes(server);
