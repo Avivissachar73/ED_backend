@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a96066d56f23fdb790129f89984d8782.js"
+  "/precache-manifest.e7a567873e773a86aa07e4c414e25839.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "frontend-starter"});
+workbox.core.setCacheNameDetails({prefix: "ed-frontent"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
