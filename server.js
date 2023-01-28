@@ -38,7 +38,7 @@ const corsConf = {
 // if (process.env.NODE_ENV === 'development') {
 if (config.env === 'development') {
   server.use(cors(corsConf));
-} else app.use(enforce.HTTPS( { trustProtoHeader: true } ));
+} else server.use(enforce.HTTPS( { trustProtoHeader: true } ));
 
 const connectRoutes = require('./routes/routes');
 connectRoutes(server);
