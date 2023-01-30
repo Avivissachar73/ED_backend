@@ -1,1 +1,1 @@
-require('./initDb.function.js')();
+require('./initDb.migration.js')();

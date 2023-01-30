@@ -1,5 +1,4 @@
 const { MongoId } = require('../../services/interface.service/extraClasses')
-const { miniOrg } = require('../organization/organization.interface')
 
 module.exports.account = {
   username: String,
@@ -8,7 +7,6 @@ module.exports.account = {
   password: String,
   email: String,
   roles: [String],
-  organizations: [miniOrg]
 }
 
 module.exports.miniUser = {

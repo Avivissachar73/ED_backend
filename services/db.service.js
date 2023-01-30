@@ -7,6 +7,7 @@ const DB_URL = config.db.url;
 module.exports = {
     connectToDb,
     getCollection,
+    connect,
     disConnect,
     ObjectId,
     query,
