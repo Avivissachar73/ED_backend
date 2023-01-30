@@ -19,7 +19,8 @@ const initDb = async (log = true) => {
   if (log) console.log('INSERTING DATA TO ENV: ' + process.env.NODE_ENV);
   
   const db = await dbService.connect();
-  const allCols = await db.listCollections().toArray();
+  let allCols = await db.listCollections().toArray();
+  allCols = allCols.map(c => c.name);
 
   const prms = dataToInsert.map(async data => {
     if (log) console.log('##');
