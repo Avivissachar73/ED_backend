@@ -4,7 +4,8 @@ const configInterface = require('./config.scheme');
 const devConf = {
   db: {
     name: 'ED',
-    url: 'mongodb+srv://ED_ADMIN:ED_APP_12345@ed.39otwpx.mongodb.net/?retryWrites=true&w=majority'
+    // url: 'mongodb+srv://ED_ADMIN:ED_APP_12345@ed.39otwpx.mongodb.net/?retryWrites=true&w=majority'
+    url: 'mongodb+srv://ED_ADMIN:ED_APP_12345@ed.39otwpx.mongodb.net/?retryWrites=true'
   },
   jwt: {
     secret: process.env.JWT_SECRET || 'some_secret_string',
