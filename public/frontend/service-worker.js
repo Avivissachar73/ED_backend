@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.5aed2463ffc2769c523ee39b622eddb7.js"
+  "/precache-manifest.3b05598a366d123ddc221e4d9c3ce9d3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ed-frontent"});
